@@ -1,0 +1,17 @@
+<div>
+<div> <button id="backBtn" [routerLink]="['']">< Back</button></div>
+        
+<span>Symbol: {{symbol}}</span> 
+    <div *ngFor="let data1 of data; index as i">
+
+        <div>{{month[data1.month]}}</div>
+    <div>
+
+<div>Mspr:{{data1.mspr}}</div> 
+<span>Change:{{data1.change}}</span>
+<span *ngIf="data1.change < 0; else other" style="color: green;">🡹</span>
+ <ng-template #other><span  style="color: red;">🢃</span></ng-template>
+
+    </div>
+</div>
+</div>
